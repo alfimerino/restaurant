@@ -1,6 +1,7 @@
 // home.js
 
 import heroImage from "./hero-image.jpg";
+import foodImage from "./food-image.jpg"
 
 export function loadHome() {
   const content = document.querySelector("#content");
@@ -9,12 +10,12 @@ export function loadHome() {
   hero.classList.add("hero-container");
 
   const image = document.createElement("img");
-  image.src = heroImage;
+  image.src = foodImage;
   image.classList.add("hero-image");
   document.body.appendChild(image);
 
   const headLine = document.createElement("h1");
-  headLine.textContent = "Welcome to the restaurant";
+  headLine.textContent = "Ari's Bistro Bar & Restaurant";
 
   hero.appendChild(image)
   content.appendChild(headLine);
