@@ -1,5 +1,187 @@
 /* styles.css */
 
+@font-face {
+    font-family: 'MeowScript';
+    src: url('./assets/fonts/meow-script-v6-latin-regular.woff2');
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans400';
+    src: url('./assets/fonts/plus-jakarta-sans-v12-latin-regular.woff2');
+}
+
+:root {
+  /* Use descriptive names for your palette */
+  --main-background-color: #0A0C10;
+  --surface-cards-color: #161B22;
+  --hero-color: #B6FF3B;
+  --secondary-text-color: #94A3B8;
+  --text-light: #ecf0f1;
+
+  /* Fonts */
+  --font-logo: 'MeowScript', sans-serif;
+  --font-body: 'PlusJakartaSans400', sans-serif;
+}
+
+/* This pins things to the top and bottom*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--main-background-color);
+    color: var(--hero-color);
+    font-family: var(--font-logo);
+    min-height: 100vh;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding: 8px 8px;
+    background-color: var(--surface-cards-color);
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Add this line */
+    background-color: var(--surface-cards-color);
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: auto;
+}
+
+.navLinksContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    gap: 28px;
+}
+
+.navLinks {
+    font-family: var(--font-body);
+    color: var(--secondary-text-color);
+    font-size: 15px;
+    align-self: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.resButton {
+    background-color: var(--hero-color);
+    color: var(--surface-cards-color);
+    padding: 12px 20px;
+    border-radius: 12px;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: white;  */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes it a "banner" */
+    z-index: -1; /* Puts image behind the text */
+    filter: brightness(24%); /* Dims image so text is readable */
+}
+
+.heroTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroTextSubtitle {
+    font-size: 72px;
+    font-family: var(--font-body);
+    margin-top: -70px
+}
+
+.heroTextTitle {
+    font-size: 256px;
+}
+
+.blurbContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: var(--surface-cards-color);
+    height: 480px;
+    border-style: solid;
+    border-color: var(--hero-color);
+    margin: 80px;
+    padding: 20px 60px;
+    color: var(--secondary-text-color);
+    font-family: var(--font-body);
+    font-size: 30px;
+}
+
+.bottomImage {
+    width: 88%;
+    height: 30%;
+    align-self: center;
+    object-fit: cover; /* This makes it a "banner" */
+    z-index: -1; /* Puts image behind the text */
+    filter: brightness(67%);
+    display: block;
+    margin: 0 auto;
+}
+
+.link-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  /* margin: 10px 0; */
+  font-family: var(--font-body);
+}
+
+.card-link2 {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap; /* Add this line */
+  text-decoration: none;
+  font-size: 30px;
+  font-family: var(--font-logo);
+}
+
+.module-link {
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.footer a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+
+.module-link:hover {
+  opacity: 0.7;
 }

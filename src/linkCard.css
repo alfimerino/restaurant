@@ -1,0 +1,17 @@
+.link-card {
+  padding: 1rem;
+  margin: 10px 0;
+  border-left: 4px solid #2563eb;
+  background: #f8fafc;
+  font-family: system-ui, sans-serif;
+}
+
+.module-link {
+  color: #2563eb;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.module-link:hover {
+  opacity: 0.7;
+}
