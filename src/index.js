@@ -4,6 +4,7 @@ import "./styles.css";
 import { loadHome } from "./home.js";
 import { loadMenu } from "./menu.js";
 import { createLinkCard, createMyLink } from "./linkCard.js";
+import { loadContact } from "./contact.js";
 const navigation = document.querySelector(".navigation");
 navigation.classList.add("navigation");
 
@@ -20,9 +21,9 @@ homeLink.classList.add("navLinks");
 
 homeLink.addEventListener("click", (e) => {
   e.preventDefault();
-  contentDiv.innerHTML = ""
-  loadHome()
-})
+  contentDiv.innerHTML = "";
+  loadHome();
+});
 
 const menuLink = document.createElement("a");
 menuLink.textContent = "Menu";
@@ -39,8 +40,14 @@ menuLink.addEventListener("click", (e) => {
 
 const contactLink = document.createElement("a");
 contactLink.textContent = "Contact";
-// contactLink.href = '#'; ---- ADD THIS LINK
+contactLink.href = "src/contact.js";
 contactLink.classList.add("navLinks");
+
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault()
+  contentDiv.innerHTML = ""
+  loadContact();
+})
 
 const resButton = document.createElement("button");
 resButton.textContent = "Reservations";
@@ -75,10 +82,14 @@ document.body.appendChild(footerContainer);
 
 const urlParams = new URLSearchParams(window.location.search);
 
-if (urlParams.has('devMenu')) {
-    loadMenu();
-} else {
-    loadHome();
+/* http://localhost:8081/?devMenu# */
+if (urlParams.has("devMenu")) {
+  loadMenu();
+} else if (urlParams.has("devContact")) {
+  loadContact()
+}
+else {
+  loadHome();
 }
 
 console.log("Test ok!");
