@@ -81,5 +81,4 @@ if (urlParams.has('devMenu')) {
     loadHome();
 }
 
-// loadHome();
 console.log("Test ok!");

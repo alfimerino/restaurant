@@ -63,21 +63,6 @@ export function loadMenu() {
     const element = createMenuSection(section);
     blurbContainer.append(element);
   });
-  /*
-const users = [
-  { name: "Food Image by Lily Banse", url: "/profile/alex" },
-  { name: "Interior Image by Shawn", url: "/profile/blake" },
-  { name: "Menu Image by Ruyan Ayten", url: "/profile/charlie" },
-  { name: "Wine Glasses Image by Siniz Kim", url: "/profile/charlie" },
-];
-
-// Reusable render logic
-users.forEach((user) => {
-  const element = createLinkCard(user);
-  footerContainer.appendChild(element);
-});
-
-*/
 
   const heroTextTitle = document.createElement("span");
   heroTextTitle.textContent = "Menu";
