@@ -23,6 +23,7 @@
   --font-body: 'PlusJakartaSans400', sans-serif;
 }
 
+/* This pins things to the top and bottom*/
 * {
     margin: 0;
     padding: 0;
@@ -57,17 +58,6 @@ body {
     padding: 20px;
     margin-top: auto;
 }
-
-
-/* .footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-between;
-    padding: 8px 8px;
-    background-color: var(--surface-cards-color);
-    /* margin-top: 40px; */
-
 
 .navLinksContainer {
     display: flex;
@@ -130,4 +120,20 @@ body {
 
 .heroTextTitle {
     font-size: 256px;
+}
+
+.blurbContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: var(--surface-cards-color);
+    height: 480px;
+    border-style: solid;
+    border-color: var(--hero-color);
+    margin: 80px;
+    padding: 20px 60px;
+    color: var(--secondary-text-color);
+    font-family: var(--font-body);
+    font-size: 30px;
 }
