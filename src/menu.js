@@ -16,12 +16,6 @@ export function loadMenu() {
   const blurbContainer = document.createElement("div");
   blurbContainer.classList.add("blurbContainer");
 
-  const sectionHeader = document.createElement("h3");
-  sectionHeader.textContent = "Starters";
-
-  const sectionItem = document.createElement("span");
-  sectionItem.textContent = "Grilled Avocado Wedges — 6";
-
   const menu = [
   {
     header: "Starters",
@@ -89,7 +83,6 @@ users.forEach((user) => {
   heroTextTitle.textContent = "Menu";
   heroTextTitle.classList.add("heroTextTitle");
 
-  blurbContainer.append(sectionHeader, sectionItem);
   hero.append(image, heroTextTitle);
   content.append(hero, blurbContainer);
   console.log("Menu her");
