@@ -11,21 +11,25 @@ headLine.textContent = "Ari's";
 const navLinksContainer = document.createElement("div");
 navLinksContainer.classList.add("navLinksContainer");
 
-const homeLink = document.createElement("span");
+const homeLink = document.createElement("a");
 homeLink.textContent = "Home";
+homeLink.href = "#";
 homeLink.classList.add("navLinks");
 
-const menuLink = document.createElement("span");
+const menuLink = document.createElement("a");
 menuLink.textContent = "Menu";
+// menuLink.href = '#'; ---- ADD THIS LINK
 menuLink.classList.add("navLinks");
 
-const contactLink = document.createElement("span");
+const contactLink = document.createElement("a");
 contactLink.textContent = "Contact";
+// contactLink.href = '#'; ---- ADD THIS LINK
 contactLink.classList.add("navLinks");
 
 const resButton = document.createElement("button");
-resButton.textContent = "Reservations"
-resButton.classList.add('resButton')
+resButton.textContent = "Reservations";
+// resButton.href = '#'; ---- ADD THIS LINK
+resButton.classList.add("resButton");
 
 navLinksContainer.append(homeLink, menuLink, contactLink, resButton);
 navigation.append(headLine, navLinksContainer);
