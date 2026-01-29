@@ -24,6 +24,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--main-background-color);
     color: var(--hero-color);
     font-family: var(--font-logo);
@@ -32,17 +35,34 @@ body {
 .navigation {
     display: flex;
     flex-direction: row;
-    height: 80px;
     align-items: center;
     justify-content:space-between;
     padding: 0px 8px;
     background-color: var(--surface-cards-color);
+    margin-bottom: 40px;
+    margin-top: 0px;
 }
 
-.homeLink {
+.navLinksContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    gap: 28px;
+}
+
+.navLinks {
     font-family: var(--font-body);
     color: var(--secondary-text-color);
     font-size: 15px;
+    align-self: center;
+}
+
+.resButton {
+    background-color: var(--hero-color);
+    color: var(--surface-cards-color);
+    padding: 12px 20px;
+    border-radius: 12px;
 }
 
 .hero-container {
