@@ -2,6 +2,7 @@
 
 import "./styles.css";
 import { loadHome } from "./home.js";
+import { createLinkCard, createMyLink } from "./linkCard.js";
 const navigation = document.querySelector(".navigation");
 navigation.classList.add("navigation");
 
@@ -31,17 +32,34 @@ resButton.textContent = "Reservations";
 // resButton.href = '#'; ---- ADD THIS LINK
 resButton.classList.add("resButton");
 
+const footerContainer = document.createElement("footer");
+footerContainer.classList.add("footer");
 
-const footerContainer = document.createElement('footer');
-footerContainer.classList.add('footer');
-footerContainer.textContent = '© 2024 Ari\'s Bar & Bistro';
+const myCreditText = document.createElement("a");
 
-document.body.appendChild(footerContainer);
+
 
 
 navLinksContainer.append(homeLink, menuLink, contactLink, resButton);
 navigation.append(headLine, navLinksContainer);
 
+const users = [
+  { name: "Food Image by Lily Banse", url: "/profile/alex" },
+  { name: "Interior Image by Shawn", url: "/profile/blake" },
+  { name: "Menu Image by Ruyan Ayten", url: "/profile/charlie" },
+  { name: "Wine Glasses Image by Siniz Kim", url: "/profile/charlie" },
+];
+
+// Reusable render logic
+users.forEach((user) => {
+  const element = createLinkCard(user);
+  footerContainer.appendChild(element);
+});
+
+const myLink = createMyLink();
+footerContainer.appendChild(myLink);
+
+document.body.appendChild(footerContainer);
 
 loadHome();
 console.log("Test ok!");
