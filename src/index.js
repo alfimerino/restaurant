@@ -20,15 +20,15 @@ homeLink.classList.add("navLinks");
 
 const menuLink = document.createElement("a");
 menuLink.textContent = "Menu";
-menuLink.href = 'src/menu.js';
+menuLink.href = "src/menu.js";
 menuLink.classList.add("navLinks");
 
-const contentDiv = document.querySelector('#content');
+const contentDiv = document.querySelector("#content");
 
-menuLink.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevents the page from jumping/reloading
-    contentDiv.innerHTML = ''; // Clear the home page content
-    loadMenu(); // Run the code that builds your menu
+menuLink.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevents the page from jumping/reloading
+  contentDiv.innerHTML = ""; // Clear the home page content
+  loadMenu(); // Run the code that builds your menu
 });
 
 const contactLink = document.createElement("a");
@@ -45,9 +45,6 @@ const footerContainer = document.createElement("footer");
 footerContainer.classList.add("footer");
 
 const myCreditText = document.createElement("a");
-
-
-
 
 navLinksContainer.append(homeLink, menuLink, contactLink, resButton);
 navigation.append(headLine, navLinksContainer);
@@ -70,5 +67,13 @@ footerContainer.appendChild(myLink);
 
 document.body.appendChild(footerContainer);
 
-loadHome();
+const urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.has('devMenu')) {
+    loadMenu();
+} else {
+    loadHomePage();
+}
+
+// loadHome();
 console.log("Test ok!");
