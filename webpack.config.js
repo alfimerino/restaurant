@@ -1,5 +1,5 @@
 // webpack.config.js
-import path from "node:path";
+import path, { resolve } from "node:path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import test from "node:test";
 
@@ -33,6 +33,13 @@ export default {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/fonts/[name][ext]",
+        },
       },
     ],
   },

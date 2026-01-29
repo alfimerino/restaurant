@@ -1,7 +1,26 @@
 /* styles.css */
 
+@font-face {
+    font-family: 'MeowScript';
+    src: url('./assets/fonts/meow-script-v6-latin-regular.woff2');
+}
+
+:root {
+  /* Use descriptive names for your palette */
+  --main-background-color: ##0A0C10;
+  --surface-cards-color: #161B22;
+  --hero-color: #B6FF3B;
+  --secondary-text-color: #94A3B8;
+  --text-light: #ecf0f1;
+
+  /* Fonts */
+  --font-logo: 'MeowScript', sans-serif;
+}
+
 body {
-    background-color: green;
+    background-color: var(--main-background-color);
+    color: var(--hero-color);
+    font-family: var(--font-logo);
 }
 
 .hero-container {
