@@ -2,6 +2,7 @@
 
 import "./styles.css";
 import { loadHome } from "./home.js";
+import { loadMenu } from "./menu.js";
 import { createLinkCard, createMyLink } from "./linkCard.js";
 const navigation = document.querySelector(".navigation");
 navigation.classList.add("navigation");
@@ -19,8 +20,16 @@ homeLink.classList.add("navLinks");
 
 const menuLink = document.createElement("a");
 menuLink.textContent = "Menu";
-// menuLink.href = '#'; ---- ADD THIS LINK
+menuLink.href = 'src/menu.js';
 menuLink.classList.add("navLinks");
+
+const contentDiv = document.querySelector('#content');
+
+menuLink.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevents the page from jumping/reloading
+    contentDiv.innerHTML = ''; // Clear the home page content
+    loadMenu(); // Run the code that builds your menu
+});
 
 const contactLink = document.createElement("a");
 contactLink.textContent = "Contact";
