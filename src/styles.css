@@ -137,3 +137,14 @@ body {
     font-family: var(--font-body);
     font-size: 30px;
 }
+
+.bottomImage {
+    width: 88%;
+    height: 30%;
+    align-self: center;
+    object-fit: cover; /* This makes it a "banner" */
+    z-index: -1; /* Puts image behind the text */
+    filter: brightness(67%);
+    display: block;
+    margin: 0 auto;
+}
