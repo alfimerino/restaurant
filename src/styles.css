@@ -23,6 +23,12 @@
   --font-body: 'PlusJakartaSans400', sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -30,6 +36,7 @@ body {
     background-color: var(--main-background-color);
     color: var(--hero-color);
     font-family: var(--font-logo);
+    min-height: 100vh;
 }
 
 .navigation {
@@ -37,11 +44,30 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content:space-between;
-    padding: 0px 8px;
+    padding: 8px 8px;
     background-color: var(--surface-cards-color);
     margin-bottom: 40px;
     margin-top: 0px;
 }
+
+.footer {
+    background-color: var(--surface-cards-color);
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+
+/* .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding: 8px 8px;
+    background-color: var(--surface-cards-color);
+    /* margin-top: 40px; */
+
 
 .navLinksContainer {
     display: flex;

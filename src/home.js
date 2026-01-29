@@ -10,7 +10,7 @@ export function loadHome() {
   hero.classList.add("hero-container");
 
   const image = document.createElement("img");
-  image.src = heroImage;
+  image.src = foodImage;
   image.classList.add("hero-image");
   document.body.appendChild(image);
 

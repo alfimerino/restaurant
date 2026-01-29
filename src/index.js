@@ -31,7 +31,17 @@ resButton.textContent = "Reservations";
 // resButton.href = '#'; ---- ADD THIS LINK
 resButton.classList.add("resButton");
 
+
+const footerContainer = document.createElement('footer');
+footerContainer.classList.add('footer');
+footerContainer.textContent = '© 2024 Ari\'s Bar & Bistro';
+
+document.body.appendChild(footerContainer);
+
+
 navLinksContainer.append(homeLink, menuLink, contactLink, resButton);
 navigation.append(headLine, navLinksContainer);
+
+
 loadHome();
 console.log("Test ok!");
