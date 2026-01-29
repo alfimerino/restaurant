@@ -18,6 +18,12 @@ homeLink.textContent = "Home";
 homeLink.href = "#";
 homeLink.classList.add("navLinks");
 
+homeLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  contentDiv.innerHTML = ""
+  loadHome()
+})
+
 const menuLink = document.createElement("a");
 menuLink.textContent = "Menu";
 menuLink.href = "src/menu.js";
@@ -72,7 +78,7 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.has('devMenu')) {
     loadMenu();
 } else {
-    loadHomePage();
+    loadHome();
 }
 
 // loadHome();
