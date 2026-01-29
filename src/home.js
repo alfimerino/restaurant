@@ -12,8 +12,21 @@ export function loadHome() {
   const image = document.createElement("img");
   image.src = foodImage;
   image.classList.add("hero-image");
-  document.body.appendChild(image);
 
-  hero.appendChild(image);
+  const heroTextContainer = document.createElement('div')
+  heroTextContainer.classList.add('heroTextContainer')
+
+
+  const heroTextTitle = document.createElement('span')
+  heroTextTitle.textContent = "Ari's"
+  heroTextTitle.classList.add("heroTextTitle")
+
+  const heroTextSubtitle = document.createElement('span')
+  heroTextSubtitle.textContent = "Bar & Bistro"
+  heroTextSubtitle.classList.add("heroTextSubtitle")
+
+  heroTextContainer.append(heroTextTitle, heroTextSubtitle)
+  hero.append(image, heroTextContainer);
+
   content.appendChild(hero);
 }
