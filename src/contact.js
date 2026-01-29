@@ -2,6 +2,7 @@
 
 import heroImage from "./assets/images/glasses.jpg";
 import { createMenuSection } from "./menuSection.js";
+import mapImage from "./assets/images/google-map.jpg";
 
 export function loadContact() {
   const content = document.querySelector("#content");
@@ -15,6 +16,12 @@ export function loadContact() {
 
   const blurbContainer = document.createElement("div");
   blurbContainer.classList.add("blurbContainer");
+
+  const mapContainer = document.createElement("div");
+  mapContainer.classList.add("blurbContainer");
+
+  const map = document.createElement('img')
+  map.src = mapImage
 
   const menu = [
     {
@@ -48,5 +55,6 @@ export function loadContact() {
   heroTextTitle.classList.add("heroTextTitle");
 
   hero.append(image, heroTextTitle);
-  content.append(hero, blurbContainer);
+  mapContainer.append(map)
+  content.append(hero, blurbContainer, mapContainer);
 }
