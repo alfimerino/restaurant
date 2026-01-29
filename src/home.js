@@ -14,10 +14,6 @@ export function loadHome() {
   image.classList.add("hero-image");
   document.body.appendChild(image);
 
-  const headLine = document.createElement("h1");
-  headLine.textContent = "Ari's Bistro Bar & Restaurant";
-
   hero.appendChild(image);
-  content.appendChild(headLine);
   content.appendChild(hero);
 }

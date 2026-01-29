@@ -5,9 +5,14 @@
     src: url('./assets/fonts/meow-script-v6-latin-regular.woff2');
 }
 
+@font-face {
+    font-family: 'PlusJakartaSans400';
+    src: url('./assets/fonts/plus-jakarta-sans-v12-latin-regular.woff2');
+}
+
 :root {
   /* Use descriptive names for your palette */
-  --main-background-color: ##0A0C10;
+  --main-background-color: #0A0C10;
   --surface-cards-color: #161B22;
   --hero-color: #B6FF3B;
   --secondary-text-color: #94A3B8;
@@ -15,12 +20,29 @@
 
   /* Fonts */
   --font-logo: 'MeowScript', sans-serif;
+  --font-body: 'PlusJakartaSans400', sans-serif;
 }
 
 body {
     background-color: var(--main-background-color);
     color: var(--hero-color);
     font-family: var(--font-logo);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0px 8px;
+    background-color: var(--surface-cards-color);
+}
+
+.homeLink {
+    font-family: var(--font-body);
+    color: var(--secondary-text-color);
+    font-size: 15px;
 }
 
 .hero-container {
