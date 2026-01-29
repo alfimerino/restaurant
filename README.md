@@ -11,6 +11,37 @@ This project is a desktop-browser-based restaurant website built using JavaScrip
 * Create a module for each page, a style sheet, and an `index.js` as the entry point.
 * The `index.js` should contain eventListeners that clear the content and reload the respective page upon clicking its tab.
 
+## Website Development Process (High-Level)
+
+1. **Goal & Requirements**  
+   Define the purpose of the website, target users, and success criteria.
+
+2. **Planning & Structure**  
+   Outline pages, features, sitemap, and user flows.
+
+3. **Design**  
+   Create wireframes and visual designs (layout, colors, typography).
+
+<img width="662" height="897" alt="Elements_Design" src="https://github.com/user-attachments/assets/b7c282e1-f407-4ee4-acc8-506b6b18b08c" />
+
+5. **Content**  
+   Prepare text, images, videos, and data.
+
+6. **Development**  
+   - Frontend (UI, client-side logic)  
+   - Backend (server logic, database, APIs)  
+   - Integrations (authentication, payments, CMS, third-party services)
+
+7. **Testing**  
+   Validate functionality, responsiveness, performance, and security.
+
+8. **Deployment**  
+   Configure hosting, domain, and production environment.
+
+9. **Maintenance & Iteration**  
+   Monitor, fix issues, and improve based on feedback.
+
+
 ## Skills Acquired & Applied
 This project allowed me to improve various skills and integrate previously learned concepts:
 
@@ -67,12 +98,12 @@ This project allowed me to improve various skills and integrate previously learn
 
 ## Resources Used
 * [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) by Mario Ranftl
-* [UI Designing Tool](https://www.figma.com/) by Figma.com
+* [UI Designing Tool](https://www.figma.com/design/xEcbAm0PsPKV7ABEppoZjs/Ari-s-Bar---Bistro-Website?m=auto&t=79pmRnuYsyaHgtvP-6) by Figma.com
 * [ColorSpace](https://mycolor.space/) by mycolor.space
 * [Graphic Design Tool](https://www.canva.com/) by Canva.com
 * [ChatGPT-4](https://chat.openai.com/) by ChatGPT
-* Interior Images by [PAKUTASO](https://www.pakutaso.com/)
-* Food Images by [photoAC](https://www.photo-ac.com/)
+* Food 📸 by [Lily Banse](https://unsplash.com/@lvnatikk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
+* Interior 📸 by [Shawn](https://unsplash.com/@shawnanggg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash  
 
 ### JavaScript Related:
 * [A Comprehensive Look at ES6 Modules](https://www.javascripttutorial.net/es6/es6-modules/) by JavaScript Tutorial
